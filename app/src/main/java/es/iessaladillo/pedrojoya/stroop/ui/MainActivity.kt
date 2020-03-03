@@ -1,22 +1,30 @@
 package es.iessaladillo.pedrojoya.stroop.ui
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import es.iessaladillo.pedrojoya.stroop.R
-import kotlinx.android.synthetic.main.assistant_fragment.*
-import kotlinx.android.synthetic.main.main_fragment.*
+import kotlinx.android.synthetic.main.main_activity.*
+
 
 
 class MainActivity : AppCompatActivity() {
 
-    private val navController: NavController by lazy {
-        findNavController(R.id.navHostFragment)
-    }
+    private val viewModel: MainActivityViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
+        setupAppBar()
     }
+
+    private fun setupAppBar() {
+        setSupportActionBar(toolbar)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
 }

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/summary_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_header_height"
+        android:background="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/summ_imgPlayer"
+            android:layout_width="@dimen/main_avatar_size"
+            android:layout_height="@dimen/main_avatar_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/summ_txtPlayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_2x"
+            android:text="@string/app_name"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textSize="@dimen/main_textSize_4x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/summ_imgPlayer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/summary_body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summary_header">
+
+
+        <TextView
+            android:id="@+id/lblsumm_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_2x"
+            android:text="@string/game_result_lblPointsLabel"
+            android:textSize="@dimen/main_textSize_4x"
+            app:layout_constraintEnd_toEndOf="@+id/lblResults"
+            app:layout_constraintStart_toStartOf="@+id/lblResults"
+            app:layout_constraintTop_toBottomOf="@+id/lblsumm_incorrect" />
+
+        <TextView
+            android:id="@+id/lblsumm_pointstext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="0"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/main_textSize_3x"
+            app:layout_constraintEnd_toEndOf="@+id/lblcorrectanwsers"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/lblcorrectanwsers"
+            app:layout_constraintTop_toBottomOf="@+id/lblsumm_points" />
+
+        <TextView
+            android:id="@+id/lblincorrectanwsers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_2x"
+            android:text="@string/game_result_lblIncorrectLabel"
+            android:textSize="@dimen/main_textSize_4x"
+            app:layout_constraintEnd_toEndOf="@+id/lblResults"
+            app:layout_constraintStart_toStartOf="@+id/lblResults"
+            app:layout_constraintTop_toBottomOf="@+id/lblsumm_correct" />
+
+        <TextView
+            android:id="@+id/lblsumm_incorrect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_1x"
+            android:text="0"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/main_textSize_3x"
+            app:layout_constraintEnd_toEndOf="@+id/lblcorrectanwsers"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/lblcorrectanwsers"
+            app:layout_constraintTop_toBottomOf="@+id/lblincorrectanwsers" />
+
+        <TextView
+            android:id="@+id/lblResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_4x"
+            android:text="@string/game_result_lblResults"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/main_textSize_6x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblcorrectanwsers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_4x"
+            android:text="@string/game_result_lblCorrectLabel"
+            android:textSize="@dimen/main_textSize_4x"
+            app:layout_constraintEnd_toEndOf="@+id/lblResults"
+            app:layout_constraintStart_toStartOf="@+id/lblResults"
+            app:layout_constraintTop_toBottomOf="@+id/lblResults" />
+
+        <TextView
+            android:id="@+id/lblsumm_correct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_1x"
+            android:text="0"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/main_textSize_3x"
+            app:layout_constraintEnd_toEndOf="@+id/lblcorrectanwsers"
+            app:layout_constraintStart_toStartOf="@+id/lblcorrectanwsers"
+            app:layout_constraintTop_toBottomOf="@+id/lblcorrectanwsers" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:elevation="@dimen/main_toolbar_elevation"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

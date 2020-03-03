@@ -8,17 +8,17 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
+        android:id="@+id/main_header"
         android:layout_width="match_parent"
         android:layout_height="@dimen/main_header_height"
-        android:background="@color/primaryDark"
+        android:background="@color/primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
         <ImageView
-            android:id="@+id/imgLogo"
+            android:id="@+id/imgPlayer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -28,7 +28,7 @@
             app:srcCompat="@drawable/logo" />
 
         <TextView
-            android:id="@+id/lblLogo"
+            android:id="@+id/txtPlayerName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/main_margin_2x"
@@ -37,7 +37,7 @@
             android:textSize="@dimen/main_textSize_4x"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+            app:layout_constraintTop_toBottomOf="@+id/imgPlayer" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
@@ -51,7 +51,6 @@
         android:textSize="@dimen/main_textSize_2x"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
-
+        app:layout_constraintTop_toBottomOf="@+id/main_header" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

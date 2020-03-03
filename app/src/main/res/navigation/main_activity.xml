@@ -14,4 +14,50 @@
         android:id="@+id/aboutFragment"
         android:name="es.iessaladillo.pedrojoya.stroop.ui.about.AboutFragment"
         android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/assistantFragment"
+        android:name="es.iessaladillo.pedrojoya.stroop.ui.assistant.AssistantFragment"
+        android:label="AssistantFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="es.iessaladillo.pedrojoya.stroop.ui.settings.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="es.iessaladillo.pedrojoya.stroop.ui.player.PlayerFragment"
+        android:label="PlayerFragment" />
+    <fragment
+        android:id="@+id/addPlayerFragment"
+        android:name="es.iessaladillo.pedrojoya.stroop.ui.addplayer.AddPlayerFragment"
+        android:label="AddPlayerFragment" />
+    <fragment
+        android:id="@+id/editPlayerFragment"
+        android:name="es.iessaladillo.pedrojoya.stroop.ui.editplayer.EditPlayerFragment"
+        android:label="EditPlayerFragment" />
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="es.iessaladillo.pedrojoya.stroop.ui.game.GameFragment"
+        android:label="GameFragment">
+        <action
+            android:id="@+id/action_summary_to_dashboard"
+            app:destination="@id/summaryFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@+id/dashboardFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="es.iessaladillo.pedrojoya.stroop.ui.summary.SummaryFragment"
+        android:label="SummaryFragment"/>
+    <fragment
+        android:id="@+id/rankingFragment"
+        android:name="es.iessaladillo.pedrojoya.stroop.ui.ranking.RankingFragment"
+        android:label="RankingFragment">
+        <action
+            android:id="@+id/action_summary_to_ranking"
+            app:destination="@id/summaryFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@+id/rankingFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
 </navigation>
